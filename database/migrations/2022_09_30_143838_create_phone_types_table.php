@@ -18,6 +18,12 @@ class CreatePhoneTypesTable extends Migration
             $table->string('name');
             $table->timestamps();
         });
+
+        DB::table('phone_types')->insert([
+            ['name' => 'Мобильный'],
+            ['name' => 'Рабочий'],
+            ['name' => 'Домашний'],
+        ]);
     }
 
     /**
